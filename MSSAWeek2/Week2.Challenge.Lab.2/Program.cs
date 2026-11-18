@@ -11,9 +11,8 @@ public class Program
     string correctUserId = "admin";
     string correctPassword = "password";
     int attempts = 0;
-    bool isAuthenticated = false;
     
-    while (attempts < 3 && !isAuthenticated)
+    while (attempts < 3)
     {
       Console.WriteLine("Enter User ID:");
       string userId = Console.ReadLine();
@@ -22,8 +21,8 @@ public class Program
 
       if (userId == correctUserId && password == correctPassword)
       {
-        isAuthenticated = true;
         Console.WriteLine("Access granted.");
+        break;
       }
       else
       {
@@ -31,7 +30,7 @@ public class Program
         Console.WriteLine($"Incorrect User ID or Password. {3 - attempts} attempts left.");
       }
     }
-    if (!isAuthenticated)
+    if (attempts == 3)
     {
       Console.WriteLine("Access denied. Too many failed attempts.");
     }

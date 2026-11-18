@@ -19,3 +19,25 @@ Sum of all elements stored in the array is : 15
 
 */
 
+
+Console.Write("Input the number of elements to be stored in the array: ");
+int count = int.Parse(Console.ReadLine());
+
+Console.WriteLine($"Input {count} elements in the array: ");
+int [] arr = new int[count];
+for (int i = 0; i < count; i++)
+{
+  Console.Write($"element - {i}: ");
+  arr[i] = int.Parse(Console.ReadLine());
+}
+
+
+int sum = 0;
+foreach (int n in arr)
+{
+  sum += n;
+}
+
+Console.WriteLine($"Sum of all elements stored in the array is: {sum}");
+
+

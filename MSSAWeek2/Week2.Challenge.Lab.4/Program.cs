@@ -17,6 +17,7 @@ Division = First
 
 */
 
+//Read user input
 Console.WriteLine("Input the Roll Number of the student:");
 int rollNum = int.Parse(Console.ReadLine());
 
@@ -27,21 +28,40 @@ Console.WriteLine("Input the marks of Physics, Chemistry and Computer Applicatio
 string marks = Console.ReadLine();
 string [] marksArray = marks.Split(' ');
 
-int count = 0
-foreach mark in marksArray
-{
-  int i = int.Parse(marksArray[count]);
-  count++;
-}
+//Parse to int
+int physics = int.Parse(marksArray[0]);
+int chemistry = int.Parse(marksArray[1]);
+int computerApp = int.Parse(marksArray[2]);
 
+Student s = new Student();
+s.RollNum = rollNum;
+s.StudentName = studentName;
+s.Physics = physics;
+s.Chemistry = chemistry;
+s.ComputerApp = computerApp;
+
+//math calculation
+int totalMarks = physics + chemistry + computerApp;
+//decimal Percentage = 
+//string Division = 
+
+
+Console.WriteLine($"Roll No : {s.RollNum}");
+Console.WriteLine($"Name of Student : {s.StudentName}");
+Console.WriteLine($"Marks in Physics : {s.Physics}");
+Console.WriteLine($"Marks in Chemistry : {s.Chemistry}");
+Console.WriteLine($"Marks in Computer Application : {s.ComputerApp}");
+Console.WriteLine($"Total Marks: {totalMarks}");
+Console.WriteLine($"Percentage : {Percentage}");
+Console.WriteLine($"Division : {Division}");
+
+
+//create Student class
 class Student
 {
-  public int rollNum
-  public string studentName
-  public int 
+  public int RollNum;
+  public string StudentName;
+  public int Physics;
+  public int Chemistry;
+  public int ComputerApp;
 }
-
-
-
-
-

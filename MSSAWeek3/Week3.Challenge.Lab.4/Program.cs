@@ -37,4 +37,13 @@ Explanation: We cannot do any operations on the string so the length remains the
 
 */
 
-Console.WriteLine("Hello, World!");
+//replace substring with empty string if substring is in the master string, while loop?
+
+string s = "ACBBD";
+
+while(s.Contains("AB") || s.Contains("CD"))
+{
+  s = s.Replace("AB", "").Replace("CD", "");
+}
+
+Console.WriteLine(s.Length);
